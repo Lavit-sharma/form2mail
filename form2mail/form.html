@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+       
+        form {
+            background: white;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            width: 300px;
+        }
+
+        label {
+            margin-bottom: 8px;
+            display: block;
+            font-weight: bold;
+            color: #555; 
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 20px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            transition: border-color 0.3s; 
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #007BFF;
+            outline: none; 
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF; 
+            color: white; 
+            border: none; 
+            padding: 10px;
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            transition: background-color 0.3s;
+            width: 100%; 
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+   
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="5cb09849-3465-4531-8fae-5687a36fecd3">
+
+        <label for="first">First Name:</label>
+        <input type="text" id="first" name="first" required>
+
+        <label for="last">Last Name:</label>
+        <input type="text" id="last" name="last" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
